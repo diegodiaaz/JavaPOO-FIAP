@@ -15,7 +15,8 @@ public class ExercicioFatorial {
 		}
 		
 		JOptionPane.showMessageDialog(null, String.format(" O fatorial de %.0f é:  %.0f", num, fatoracao));
-
+		
+		double b;
 	}
 
 }
