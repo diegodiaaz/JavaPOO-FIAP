@@ -6,17 +6,16 @@ public class ExercicioFatorial {
 
 	public static void main(String[] args) {
 
-		float num, fatoracao = 1, a;
+		float num, fat = 1, i;
 
 		num = Float.parseFloat(JOptionPane.showInputDialog("Insira o número que você deseja fatorar: "));
 
-		for (a = 1; a <= num; a++) {
-			fatoracao = fatoracao * a;
+		for (i = 1; i <= num; i++) {
+			fat = fat * i;
 		}
 		
-		JOptionPane.showMessageDialog(null, String.format(" O fatorial de %.0f é:  %.0f", num, fatoracao));
+		JOptionPane.showMessageDialog(null, String.format(" O fatorial de %.0f é:  %.0f", num, fat));
 		
-		double b;
 	}
 
 }

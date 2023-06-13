@@ -1,6 +1,6 @@
 package aulasPOO.exercicios.aula01;
 
-public class Atividade03 {
+public class Exercicio03 {
 
 	public static void main(String[] args) {
 
