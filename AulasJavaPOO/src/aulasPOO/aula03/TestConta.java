@@ -1,10 +1,10 @@
 package aulasPOO.aula03;
 
-import javax.swing.JOptionPane;
+import java.text.ParseException;
 
 public class TestConta {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		
 		// objetos
@@ -12,8 +12,8 @@ public class TestConta {
 		LCI lci = new LCI();
 		LCA lca = new LCA();
 		
-		Cliente vitinho = new Cliente("Vitinho", "123456789", "123456788", "Rua x, 145");
-		Cliente camotinha = new Cliente("Camotinha", "987654321", "987654321", "Rua y, 256");
+		Cliente vitinho = new Cliente("Vitinho", "123456789", "123456788", "Rua x, 145", "28/06/1990");
+		Cliente camotinha = new Cliente("Camotinha", "987654321", "987654321", "Rua y, 256", "29/07/2005");
 		
 		ContaCorrente contaVitinho = new ContaCorrente(vitinho, 1, 1, "teste");
 		ContaCorrente contaCamotinha = new ContaCorrente(camotinha, 2, 1, "teste");
@@ -40,8 +40,13 @@ public class TestConta {
 		
 		Conta.exibirContador();
 
-		contaCamotinha.investimento(cdb, 100);
+		contaCamotinha.investimento(lci, 100);
+		contaCamotinha.investimento(lca, 100);
+		contaVitinho.investimento(cdb, 100);
+		
 		contaCamotinha.exibirSaldo();
+		contaVitinho.exibirSaldo();
+		
 	}
 
 }

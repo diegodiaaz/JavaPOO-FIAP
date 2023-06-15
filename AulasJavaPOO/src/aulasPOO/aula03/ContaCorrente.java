@@ -1,6 +1,5 @@
 package aulasPOO.aula03;
 
-import javax.swing.JOptionPane;
 
 public class ContaCorrente extends Conta {
 

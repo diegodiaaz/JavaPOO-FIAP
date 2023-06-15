@@ -4,7 +4,7 @@ public class CDB implements Produto {
 
 	@Override
 	public double investir(double valor) {
-		return valor * 0.13;
+		return valor + (valor * 0.1375);
 	}
 
 }
