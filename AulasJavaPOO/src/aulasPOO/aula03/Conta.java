@@ -26,12 +26,14 @@ public abstract class Conta {
 	}
 
 	// sacar
-	public boolean sacar(double valor) {
+	public boolean sacar(double valor) throws SaldoInsuficiente{
 
 		if (valor > 0) {
 			if (this.saldo >= valor) {
 				this.saldo -= valor;
 				return true;
+			} else {
+				throw new SaldoInsuficiente("Saldo Insuficiente!");
 			}
 		}
 		return false;
@@ -43,7 +45,7 @@ public abstract class Conta {
 	}
 
 	// transferir
-	public void transferir(Conta conta, double valor) {
+	public void transferir(Conta conta, double valor) throws SaldoInsuficiente {
 		boolean teste = this.sacar(valor);
 		if (teste == true) {
 			conta.depositar(valor);
