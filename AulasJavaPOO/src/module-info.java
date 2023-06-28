@@ -6,4 +6,5 @@ module fabricaVeiculos {
 	exports aulasPOO.aula03;
 
 	requires java.desktop;
+	requires java.sql;
 }
